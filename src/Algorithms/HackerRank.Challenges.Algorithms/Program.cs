@@ -17,4 +17,13 @@ Console.WriteLine("################ BILL DIVISION ##################### \n");
 BillDivision.PrintBillDivision([2, 4, 6], 2, 3);
 BillDivision.PrintBillDivision([2, 4, 6], 2, 6);
 
+Console.WriteLine("################ MIGRATORY BIRDS ##################### \n");
+
+var migratoryBirdsResult = MigratoryBirds.GetBirdsFrequency([1, 1, 2, 2, 3]);
+var migratoryBirdsResult2 = MigratoryBirds.GetBirdsFrequency([1, 4, 4, 4, 5, 3]);
+var migratoryBirdsResult3 = MigratoryBirds.GetBirdsFrequency([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4, 1, 4]);
+var migratoryBirdsResult4 = MigratoryBirds.GetBirdsFrequency([2, 2, 1, 1, 3]);
+
+
+
 Console.WriteLine();
