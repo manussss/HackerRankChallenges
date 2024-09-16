@@ -53,4 +53,9 @@ Console.WriteLine("################ DIVISIBLE SUM PAIRS ##################### \n
 
 var divisibleSumPairs = DivisibleSumPairs.GetNumberOfPairs(6, 3, [1, 3, 2, 6, 1, 2]);
 
+Console.WriteLine("################ SUBARRAY DIVISION ##################### \n");
+
+var subarrayDivision = SubArrayDivision.GetChocolateSquare([2, 2, 1, 3, 2], 4, 2);
+var subarrayDivision1 = SubArrayDivision.GetChocolateSquare([4], 4, 1);
+
 Console.WriteLine();
