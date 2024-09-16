@@ -4,7 +4,32 @@ Console.WriteLine("################ DESIGNER PDF VIEWER ##################### \n
 
 var resultDesignerPdfViewer = DesignerPdfViewer.GetHighlightedText(
 [
-    1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5
+    1,
+    3,
+    1,
+    3,
+    1,
+    4,
+    1,
+    3,
+    2,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
 ], "abc");
 
 Console.WriteLine("################ CATS AND A MOUSE ##################### \n");
@@ -24,6 +49,8 @@ var migratoryBirdsResult2 = MigratoryBirds.GetBirdsFrequency([1, 4, 4, 4, 5, 3])
 var migratoryBirdsResult3 = MigratoryBirds.GetBirdsFrequency([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4, 1, 4]);
 var migratoryBirdsResult4 = MigratoryBirds.GetBirdsFrequency([2, 2, 1, 1, 3]);
 
+Console.WriteLine("################ DIVISIBLE SUM PAIRS ##################### \n");
 
+var divisibleSumPairs = DivisibleSumPairs.GetNumberOfPairs(6, 3, [1, 3, 2, 6, 1, 2]);
 
 Console.WriteLine();
