@@ -70,4 +70,8 @@ Console.WriteLine("################ APPLE AND ORANGE ##################### \n");
 
 var appleAndOrangeResult = AppleAndOrange.CountApplesAndOranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4]);
 
+Console.WriteLine("################ GRADING STUDENTS ##################### \n");
+
+var gradingStudentsResult = GradingStudents.GetStudentsGrades([73, 67, 3, 33]);
+
 Console.WriteLine();
