@@ -66,4 +66,8 @@ Console.WriteLine("################ NUMBER LINE JUMPS ##################### \n")
 
 var numberLineJumpsResult = NumberLineJumps.WillKangoroosMeet(0, 3, 4, 2);
 
+Console.WriteLine("################ APPLE AND ORANGE ##################### \n");
+
+var appleAndOrangeResult = AppleAndOrange.CountApplesAndOranges(7, 10, 4, 12, [2, 3, -4], [3, -2, -4]);
+
 Console.WriteLine();
