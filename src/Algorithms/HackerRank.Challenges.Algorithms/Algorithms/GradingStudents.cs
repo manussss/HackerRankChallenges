@@ -9,24 +9,14 @@
          */
         public static List<int> GetStudentsGrades(List<int> grades)
         {
-            var gradesRounded = new List<int>();
+            Func<int, int> roundNextMultipleFive = grade => 5 * ((grade - 1) / 5 + 1);
 
-            foreach (var grade in grades)
-            {
-                if (grade < 38)
-                    gradesRounded.Add(grade);
-                else
-                {
-                    var roundedGrade = 5 * ((grade - 1) / 5 + 1);
-
-                    if (roundedGrade - grade < 3)
-                        gradesRounded.Add(roundedGrade);
-                    else
-                        gradesRounded.Add(grade);
-                }
-            }
-
-            return gradesRounded;
+            return grades
+                .Select(grade =>
+                    grade < 38 ? grade :
+                    roundNextMultipleFive(grade) - grade < 3 ? roundNextMultipleFive(grade) : grade
+                )
+                .ToList();
         }
     }
-}
+}   
