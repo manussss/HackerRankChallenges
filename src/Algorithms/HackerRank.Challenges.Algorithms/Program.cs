@@ -62,4 +62,8 @@ Console.WriteLine("################ SUBARRAY DIVISION ##################### \n")
 
 var breakingTheRecordsResult = BreakingTheRecords.GetRecords([10, 5, 20, 20, 4, 5, 2, 25, 1]);
 
+Console.WriteLine("################ SUBARRAY DIVISION ##################### \n");
+
+var numberLineJumpsResult = NumberLineJumps.WillKangoroosMeet(0, 3, 4, 2);
+
 Console.WriteLine();
