@@ -74,4 +74,13 @@ Console.WriteLine("################ GRADING STUDENTS ##################### \n");
 
 var gradingStudentsResult = GradingStudents.GetStudentsGrades([73, 67, 3, 33]);
 
+Console.WriteLine("################ TIME CONVERSION ##################### \n");
+
+var timeConversionResult = TimeConversion.GetMilitaryTime("12:01:00PM");
+var timeConversionResult1 = TimeConversion.GetMilitaryTime("12:01:00AM");
+var timeConversionResult2 = TimeConversion.GetMilitaryTime("01:01:00PM");
+var timeConversionResult3 = TimeConversion.GetMilitaryTime("11:01:00PM");
+var timeConversionResult4 = TimeConversion.GetMilitaryTime("01:01:00AM");
+var timeConversionResult5 = TimeConversion.GetMilitaryTime("01:01:00AM");
+
 Console.WriteLine();
