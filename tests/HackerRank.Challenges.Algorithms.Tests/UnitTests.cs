@@ -120,4 +120,21 @@ public class UnitTests
         Assert.Equal(2063136757, result2[0]);
         Assert.Equal(2744467344, result2[1]);
     }
+
+    [Fact]
+    public void StaircaseTest()
+    {
+        //Arrange & Act
+        var result = Staircase.GetStaircase(6);
+
+        //Assert
+        Assert.Equal(
+    @"     #
+    ##
+   ###
+  ####
+ #####
+######
+", result);
+    }
 }
