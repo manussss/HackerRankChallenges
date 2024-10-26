@@ -172,4 +172,15 @@ public class UnitTests
 ######
 ", result);
     }
+
+    [Fact]
+    public void PlusMinustest()
+    {
+        //Arrange & Act
+        var result = PlusMinus.GetPlusMinus([1, 1, 0, -1, -1]);
+
+        Assert.Equal("0,400000", result[0]);
+        Assert.Equal("0,200000", result[1]);
+        Assert.Equal("0,400000", result[2]);
+    }
 }
