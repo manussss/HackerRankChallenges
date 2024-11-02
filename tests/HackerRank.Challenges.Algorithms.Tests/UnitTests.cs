@@ -197,4 +197,13 @@ public class UnitTests
 
         Assert.Equal(2, result);
     }
+
+    [Fact]
+    public void AVeryBigSumTest()
+    {
+        //Arrange & Act
+        var result = AVeryBigSum.GetAVeryBigSum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005]);
+
+        Assert.Equal(5000000015, result);
+    }
 }
