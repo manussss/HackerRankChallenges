@@ -174,7 +174,7 @@ public class UnitTests
     }
 
     [Fact]
-    public void PlusMinustest()
+    public void PlusMinusTest()
     {
         //Arrange & Act
         var result = PlusMinus.GetPlusMinus([1, 1, 0, -1, -1]);
@@ -182,5 +182,19 @@ public class UnitTests
         Assert.Equal("0,400000", result[0]);
         Assert.Equal("0,200000", result[1]);
         Assert.Equal("0,400000", result[2]);
+    }
+
+    [Fact]
+    public void DiagonalDifferenceTest()
+    {
+        //Arrange & Act
+        var result = DiagonalDifference.GetDiagonalDifference(
+        [
+            [1, 2, 3],
+            [4, 5, 6],
+            [9, 8, 9]
+        ]);
+
+        Assert.Equal(2, result);
     }
 }
