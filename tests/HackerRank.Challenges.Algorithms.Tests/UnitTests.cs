@@ -206,4 +206,12 @@ public class UnitTests
 
         Assert.Equal(5000000015, result);
     }
+
+    [Fact]
+    public void CountingValleysTest()
+    {
+        var result = CountingValleys.GetCountingValleys(8, "UDDDUDUU");
+
+        Assert.Equal(1, result);
+    }
 }
