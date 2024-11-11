@@ -214,4 +214,12 @@ public class UnitTests
 
         Assert.Equal(1, result);
     }
+
+    [Fact]
+    public void AngryProfessorTest()
+    {
+        var result = AngryProfessor.IsClassCancelled(3, [-2, -1, 0, 1, 2]);
+
+        Assert.Equal("NO", result);
+    }
 }
