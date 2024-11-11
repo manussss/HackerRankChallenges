@@ -222,4 +222,12 @@ public class UnitTests
 
         Assert.Equal("NO", result);
     }
+
+    [Fact]
+    public void BeautifulDaysAtTheMoviesTest()
+    {
+        var result = BeautifulDaysAtTheMovies.GetBeautifulDays(20, 23, 6);
+
+        Assert.Equal(2, result);
+    }
 }
