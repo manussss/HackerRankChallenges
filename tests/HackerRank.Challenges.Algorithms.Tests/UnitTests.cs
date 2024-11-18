@@ -230,4 +230,12 @@ public class UnitTests
 
         Assert.Equal(2, result);
     }
+
+    [Fact]
+    public void SalesByMathTest()
+    {
+        var result = SalesByMath.GetSockMerchantPairs(9, [10, 20, 20, 10, 10, 30, 50, 10, 20]);
+
+        Assert.Equal(3, result);
+    }
 }
