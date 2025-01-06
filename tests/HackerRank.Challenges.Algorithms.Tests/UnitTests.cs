@@ -238,4 +238,12 @@ public class UnitTests
 
         Assert.Equal(3, result);
     }
+
+    [Fact]
+    public void DrawingBookTest()
+    {
+        var result = DrawingBook.GetPagesTo(5, 3);
+
+        Assert.Equal(1, result);
+    }
 }
