@@ -246,4 +246,12 @@ public class UnitTests
 
         Assert.Equal(1, result);
     }
+
+    [Fact]
+    public void TheHurdleRaceTest()
+    {
+        var result = TheHurdleRace.GetPoisonsAmount(4, [1, 6, 3, 5, 2]);
+
+        Assert.Equal(2, result);
+    }
 }
