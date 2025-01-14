@@ -254,4 +254,12 @@ public class UnitTests
 
         Assert.Equal(2, result);
     }
+
+    [Fact]
+    public void ViralAdvertisingTest()
+    {
+        var result = ViralAdvertising.GetCumulativeLikesAt(5);
+
+        Assert.Equal(24, result);
+    }
 }
