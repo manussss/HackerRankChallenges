@@ -1,4 +1,6 @@
-namespace HackerRank.Challenges.Algorithms.Tests;
+using ProgrammingChallenges.HackerRank;
+
+namespace ProgrammingChallenges.Tests;
 
 public class UnitTests
 {

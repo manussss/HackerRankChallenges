@@ -1,6 +1,4 @@
-﻿using System.Runtime;
-
-namespace HackerRank.Challenges.Algorithms.Algorithms;
+﻿namespace ProgrammingChallenges.HackerRank;
 
 public static class AngryProfessor
 {

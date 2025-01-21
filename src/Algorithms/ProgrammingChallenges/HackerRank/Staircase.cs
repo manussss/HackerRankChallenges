@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace HackerRank.Challenges.Algorithms.Algorithms;
+namespace ProgrammingChallenges.HackerRank;
 
 /*
 floors = 6

@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Algorithms\HackerRank.Challenges.Algorithms\HackerRank.Challenges.Algorithms.csproj" />
+    <ProjectReference Include="..\..\src\Algorithms\ProgrammingChallenges\ProgrammingChallenges.csproj" />
   </ItemGroup>
 
 </Project>
