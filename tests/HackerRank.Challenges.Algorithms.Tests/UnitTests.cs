@@ -1,4 +1,5 @@
 using ProgrammingChallenges.HackerRank;
+using ProgrammingChallenges.LeetCode;
 
 namespace ProgrammingChallenges.Tests;
 
@@ -271,5 +272,11 @@ public class UnitTests
         var result = FindDigits.GetDivisors(124);
 
         Assert.Equal(3, result);
+    }
+
+    [Fact]
+    public void MergeSortedArrayTest()
+    {
+        MergeSortedArray.Merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
     }
 }
