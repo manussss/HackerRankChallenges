@@ -262,4 +262,12 @@ public class UnitTests
 
         Assert.Equal(24, result);
     }
+
+    [Fact]
+    public void FindDigitsTest()
+    {
+        var result = FindDigits.GetDivisors(124);
+
+        Assert.Equal(3, result);
+    }
 }
