@@ -287,4 +287,12 @@ public class UnitTests
 
         Assert.Equal(2, result);
     }
+
+    [Fact]
+    public void RemoveDuplicatesFromSortedArrayTest()
+    {
+        var result = RemoveDuplicatesFromSortedArray.RemoveDuplicates([1, 1, 2, 3, 3, 4, 5]);
+
+        Assert.Equal(5, result);
+    }
 }
