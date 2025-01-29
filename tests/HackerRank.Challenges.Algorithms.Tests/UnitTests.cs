@@ -303,4 +303,12 @@ public class UnitTests
 
         Assert.Equal(8, result);
     }
+
+    [Fact]
+    public void SaveThePrisionerTest()
+    {
+        var result = SaveThePrisioner.GetChairNumber(7, 19, 2);
+
+        Assert.Equal(6, result);
+    }
 }
