@@ -319,4 +319,12 @@ public class UnitTests
 
         Assert.Equal(2, result);
     }
+
+    [Fact]
+    public void BestTimetoBuyandSellStockTest()
+    {
+        var result = BestTimetoBuyandSellStock.GetMaxProfit([7, 1, 5, 3, 6, 4]);
+
+        Assert.Equal(5, result);
+    }
 }
