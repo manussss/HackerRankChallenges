@@ -311,4 +311,12 @@ public class UnitTests
 
         Assert.Equal(6, result);
     }
+
+    [Fact]
+    public void MajorityElementTest()
+    {
+        var result = MajorityElement.GetMajorityElement([2, 2, 1, 1, 1, 2, 2]);
+
+        Assert.Equal(2, result);
+    }
 }
