@@ -327,4 +327,14 @@ public class UnitTests
 
         Assert.Equal(5, result);
     }
+
+    [Fact]
+    public void TranslateRomanToIntTest()
+    {
+        var result = RomanToInteger.TranslateRomanToInt("III");
+        var result1 = RomanToInteger.TranslateRomanToInt("MCMXCIV");
+
+        Assert.Equal(3, result);
+        Assert.Equal(1994, result1);
+    }
 }
