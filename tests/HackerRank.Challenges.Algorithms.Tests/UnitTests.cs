@@ -345,4 +345,14 @@ public class UnitTests
 
         Assert.Equal(4, result);
     }
+
+    [Fact]
+    public void FindtheIndexOfTheFirstOccurrenceInAStringTest()
+    {
+        var result = FindtheIndexOfTheFirstOccurrenceInAString.GetIndexOfTheFirstOccurrence("sadbutsad", "sad");
+        var result1 = FindtheIndexOfTheFirstOccurrenceInAString.GetIndexOfTheFirstOccurrence("leetcode", "leeto");
+
+        Assert.Equal(0, result);
+        Assert.Equal(-1, result1);
+    }
 }
