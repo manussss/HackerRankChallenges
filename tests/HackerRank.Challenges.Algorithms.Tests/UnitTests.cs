@@ -337,4 +337,12 @@ public class UnitTests
         Assert.Equal(3, result);
         Assert.Equal(1994, result1);
     }
+
+    [Fact]
+    public void LengthOfLastWordTest()
+    {
+        var result = LengthOfLastWord.GetLengthOfLastWord("   fly me   to   the moon  ");
+
+        Assert.Equal(4, result);
+    }
 }
