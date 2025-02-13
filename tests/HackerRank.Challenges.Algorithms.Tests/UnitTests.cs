@@ -355,4 +355,14 @@ public class UnitTests
         Assert.Equal(0, result);
         Assert.Equal(-1, result1);
     }
+
+    [Fact]
+    public void ValidPalindromeTest()
+    {
+        var result = ValidPalindrome.IsPalindrome("A man, a plan, a canal: Panama");
+        var result1 = ValidPalindrome.IsPalindrome("race a car");
+
+        Assert.True(result);
+        Assert.False(result1);
+    }
 }
