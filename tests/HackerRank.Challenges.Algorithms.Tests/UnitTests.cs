@@ -365,4 +365,16 @@ public class UnitTests
         Assert.True(result);
         Assert.False(result1);
     }
+
+    [Fact]
+    public void IsSubsequenceTest()
+    {
+        var result = IsSubsequence.IsSub("abc", "ahbgdc");
+        var result1 = IsSubsequence.IsSub("acb", "ahbgdc");
+        var result2 = IsSubsequence.IsSub("b", "abc");
+
+        Assert.True(result);
+        Assert.False(result1);
+        Assert.False(result1);
+    }
 }
