@@ -377,4 +377,18 @@ public class UnitTests
         Assert.False(result1);
         Assert.False(result1);
     }
+
+    [Fact]
+    public void RansomNoteTest()
+    {
+        var result = RansomNote.CanConstruct("a", "b");
+        var result1 = RansomNote.CanConstruct("bg", "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj");
+        var result2 = RansomNote.CanConstruct("aa", "aab");
+        var result3 = RansomNote.CanConstruct("aa", "baab");
+
+        Assert.False(result);
+        Assert.True(result1);
+        Assert.True(result2);
+        Assert.True(result3);
+    }
 }
