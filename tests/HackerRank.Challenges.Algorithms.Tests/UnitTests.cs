@@ -413,4 +413,14 @@ public class UnitTests
         Assert.True(result1);
         Assert.False(result2);
     }
+
+    [Fact]
+    public void IsAnagramTest()
+    {
+        var result = ValidAnagram.IsAnagram("anagram", "nagaram");
+        var result1 = ValidAnagram.IsAnagram("aacc", "ccac");
+
+        Assert.True(result);
+        Assert.False(result1);
+    }
 }
