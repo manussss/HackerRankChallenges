@@ -391,4 +391,14 @@ public class UnitTests
         Assert.True(result2);
         Assert.True(result3);
     }
+
+    [Theory]
+    [InlineData("add", "egg")]
+    [InlineData("paper", "title")]
+    public void IsomorphicStringsTest(string s, string t)
+    {
+        var result = IsomorphicStrings.IsIsomorphic(s, t);
+
+        Assert.True(result);
+    }
 }
