@@ -401,4 +401,16 @@ public class UnitTests
 
         Assert.True(result);
     }
+
+    [Fact]
+    public void WordPatternTest()
+    {
+        var result = WordPattern.IsWordPattern("abba", "dog cat cat dog");
+        var result1 = WordPattern.IsWordPattern("ddefr", "dog dog cat fish frog");
+        var result2 = WordPattern.IsWordPattern("abba", "dog cat cat fish");
+
+        Assert.True(result);
+        Assert.True(result1);
+        Assert.False(result2);
+    }
 }
