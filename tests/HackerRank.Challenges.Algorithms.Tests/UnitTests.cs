@@ -423,4 +423,14 @@ public class UnitTests
         Assert.True(result);
         Assert.False(result1);
     }
+
+    [Fact]
+    public void TwoSumTest()
+    {
+        var result = TwoSum.GetTwoSum([2, 7, 11, 15], 9);
+        var result1 = TwoSum.GetTwoSum([2, 5, 5, 11], 10);
+
+        Assert.Equal([0, 1], result);
+        Assert.Equal([1, 2], result1);
+    }
 }
