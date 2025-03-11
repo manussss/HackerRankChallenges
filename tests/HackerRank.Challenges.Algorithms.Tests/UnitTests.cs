@@ -443,4 +443,16 @@ public class UnitTests
         Assert.True(result);
         Assert.False(result1);
     }
+
+    [Fact]
+    public void ContainsDuplicateIITest()
+    {
+        var result = ContainsDuplicateII.ContainsNearbyDuplicate([1, 2, 3, 1], 3);
+        var result1 = ContainsDuplicateII.ContainsNearbyDuplicate([1, 0, 1, 1], 1);
+        var result2 = ContainsDuplicateII.ContainsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2);
+
+        Assert.True(result);
+        Assert.True(result1);
+        Assert.False(result2);
+    }
 }
