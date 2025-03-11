@@ -433,4 +433,14 @@ public class UnitTests
         Assert.Equal([0, 1], result);
         Assert.Equal([1, 2], result1);
     }
+
+    [Fact]
+    public void HappyNumberTest()
+    {
+        var result = HappyNumber.IsHappy(19);
+        var result1 = HappyNumber.IsHappy(2);
+
+        Assert.True(result);
+        Assert.False(result1);
+    }
 }
