@@ -20,13 +20,14 @@ public static class ContainsDuplicateII
      */
     public static bool ContainsNearbyDuplicate(int[] nums, int k)
     {
-        for (int i = 0; i < nums.Length - 1; i++)
+        Dictionary<int, int> map = [];
+
+        for (int i = 0; i < nums.Length; i++)
         {
-            for (int j = i + 1; (j < nums.Length && j <= i + k); j++) // garantir que o índice j não ultrapasse o limite do array nem a distância máxima permitida entre os índices i e j (definida por k)
-            {
-                if (nums[i] == nums[j] && Math.Abs(i - j) <= k)
-                    return true;
-            }
+            if (map.TryGetValue(nums[i], out int value) && Math.Abs(i - value) <= k)
+                return true;
+
+            map[nums[i]] = i;
         }
 
         return false;
