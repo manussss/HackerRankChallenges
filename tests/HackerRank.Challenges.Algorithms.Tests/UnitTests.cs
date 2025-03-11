@@ -455,4 +455,12 @@ public class UnitTests
         Assert.True(result1);
         Assert.False(result2);
     }
+
+    [Fact]
+    public void GetSummaryRangesTest()
+    {
+        var result = SummaryRanges.GetSummaryRanges([0, 1, 2, 4, 5, 7]);
+
+        Assert.Equal(["0->2", "4->5", "7"], result);
+    }
 }
