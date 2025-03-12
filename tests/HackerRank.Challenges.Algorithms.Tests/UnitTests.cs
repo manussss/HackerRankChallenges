@@ -463,4 +463,12 @@ public class UnitTests
 
         Assert.Equal(["0->2", "4->5", "7"], result);
     }
+
+    [Fact]
+    public void LongestCommonPrefixTest()
+    {
+        var result = LongestCommonPrefix.GetLongestCommonPrefix(["flower", "flow", "flight"]);
+
+        Assert.Equal("fl", result);
+    }
 }
