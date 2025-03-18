@@ -471,4 +471,16 @@ public class UnitTests
 
         Assert.Equal("fl", result);
     }
+
+    [Fact]
+    public void ValidParenthesesTest()
+    {
+        var result = ValidParentheses.IsValid("()[]{}");
+        var result1 = ValidParentheses.IsValid("(]");
+        var result2 = ValidParentheses.IsValid("([)]");
+
+        Assert.True(result);
+        Assert.False(result1);
+        Assert.False(result2);
+    }
 }
