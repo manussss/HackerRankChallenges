@@ -483,4 +483,28 @@ public class UnitTests
         Assert.False(result1);
         Assert.False(result2);
     }
+
+    [Fact]
+    public void LinkedListCycleTest()
+    {
+        ListNode head = new(1)
+        {
+            Next = new ListNode(2)
+        };
+        head.Next.Next = head;
+        var result = LinkedListCycle.HasCycle(head);
+
+        ListNode head1 = new(1)
+        {
+            Next = new ListNode(2)
+        };
+        head1.Next.Next = new ListNode(3)
+        {
+            Next = new ListNode(4)
+        };
+        var result1 = LinkedListCycle.HasCycle(head1);
+
+        Assert.True(result);
+        Assert.False(result1);
+    }
 }
