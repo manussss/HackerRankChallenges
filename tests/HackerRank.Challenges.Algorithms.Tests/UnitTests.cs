@@ -507,4 +507,36 @@ public class UnitTests
         Assert.True(result);
         Assert.False(result1);
     }
+
+    [Fact]
+    public void MergeTwoSortedListsTest()
+    {
+        ListNode list1 = new(1)
+        {
+            Next = new ListNode(2)
+            {
+                Next = new ListNode(4)
+            }
+        };
+
+        ListNode list2 = new(1)
+        {
+            Next = new ListNode(3)
+            {
+                Next = new ListNode(4)
+            }
+        };
+
+        ListNode mergedList = MergeTwoSortedLists.MergeTwoLists(list1, list2);
+
+        var result = new List<int>();
+        while (mergedList != null)
+        {
+            result.Add(mergedList.Val);
+            mergedList = mergedList.Next;
+        }
+
+        var expected = new List<int> { 1, 1, 2, 3, 4, 4 };
+        Assert.Equal(expected, result);
+    }
 }
