@@ -567,16 +567,47 @@ public class UnitTests
         //      /   \          /   \
         //     2     3        2     3
 
-        TreeNode firstRoot = new TreeNode(1);
-        firstRoot.left = new TreeNode(2);
-        firstRoot.right = new TreeNode(3);
+        TreeNode firstRoot = new(1);
+        firstRoot.left = new(2);
+        firstRoot.right = new(3);
 
-        TreeNode secondRoot = new TreeNode(1);
-        secondRoot.left = new TreeNode(2);
-        secondRoot.right = new TreeNode(3);
+        TreeNode secondRoot = new(1);
+        secondRoot.left = new(2);
+        secondRoot.right = new(3);
 
         var result = SameTree.IsSameTree(firstRoot, secondRoot);
 
         Assert.True(result);
+    }
+
+    [Fact]
+    public void InvertBinaryTreeTest()
+    {
+        //         4                     4 
+        //      /     \               /     \    
+        //     2       7    ====>    7       2
+        //    / \     /  \          / \     /  \
+        //   1   3   6    9        9   6   3    1
+
+        TreeNode root = new(4);
+
+        root.left = new(2);
+        root.right = new(7);
+
+        root.left.left = new(1);
+        root.left.right = new(3);
+
+        root.right.left = new(6);
+        root.right.right = new(9);
+
+        var result = InvertBinaryTree.InvertTree(root);
+
+        Assert.Equal(4, result.val);
+        Assert.Equal(7, result.left.val);
+        Assert.Equal(2, result.right.val);
+        Assert.Equal(9, result.left.left.val);
+        Assert.Equal(6, result.left.right.val);
+        Assert.Equal(3, result.right.left.val);
+        Assert.Equal(1, result.right.right.val);
     }
 }
