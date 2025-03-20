@@ -559,4 +559,24 @@ public class UnitTests
 
         Assert.Equal(3, result);
     }
+
+    [Fact]
+    public void SameTreeTest()
+    {
+        //        1              1
+        //      /   \          /   \
+        //     2     3        2     3
+
+        TreeNode firstRoot = new TreeNode(1);
+        firstRoot.left = new TreeNode(2);
+        firstRoot.right = new TreeNode(3);
+
+        TreeNode secondRoot = new TreeNode(1);
+        secondRoot.left = new TreeNode(2);
+        secondRoot.right = new TreeNode(3);
+
+        var result = SameTree.IsSameTree(firstRoot, secondRoot);
+
+        Assert.True(result);
+    }
 }
