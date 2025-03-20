@@ -539,4 +539,24 @@ public class UnitTests
         var expected = new List<int> { 1, 1, 2, 3, 4, 4 };
         Assert.Equal(expected, result);
     }
+
+    [Fact]
+    public void MaximumDepthofBinaryTreeTest()
+    {
+        //        1
+        //      /   \
+        //     2     3
+        //    / \
+        //   4   5
+
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        var result = MaximumDepthofBinaryTree.MaxDepth(root);
+
+        Assert.Equal(3, result);
+    }
 }
