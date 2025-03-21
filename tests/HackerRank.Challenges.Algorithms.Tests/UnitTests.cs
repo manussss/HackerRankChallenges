@@ -664,4 +664,29 @@ public class UnitTests
 
         Assert.True(result);
     }
+
+    [Fact]
+    public void CountCompleteTreeNodesTest()
+    {
+        //         1  
+        //      /     \    
+        //     2       3
+        //    /      
+        //   4     
+        //  /  \       
+        // 5    6      
+
+        TreeNode root = new(1);
+
+        root.left = new(2);
+        root.right = new(3);
+
+        root.left.left = new(4);
+        root.left.left.left = new(5);
+        root.left.left.right = new(6);
+
+        var result = CountCompleteTreeNodes.CountNodes(root);
+
+        Assert.Equal(6, result);
+    }
 }
