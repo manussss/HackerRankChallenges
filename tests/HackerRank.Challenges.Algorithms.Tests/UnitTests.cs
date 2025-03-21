@@ -635,4 +635,33 @@ public class UnitTests
 
         Assert.True(result);
     }
+
+    [Fact]
+    public void PathSumTest()
+    {
+        //         5  
+        //      /     \    
+        //     4       8
+        //    /       / \
+        //   11     13   4
+        //  /  \          \
+        // 7    2          1
+
+        TreeNode root = new(5);
+
+        root.left = new(4);
+        root.right = new(8);
+
+        root.left.left = new(11);
+        root.left.left.left = new(7);
+        root.left.left.right = new(2);
+
+        root.right.left = new(13);
+        root.right.right = new(4);
+        root.right.right.right = new(1);
+
+        var result = PathSum.HasPathSum(root, 22);
+
+        Assert.True(result);
+    }
 }
