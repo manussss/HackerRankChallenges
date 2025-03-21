@@ -610,4 +610,29 @@ public class UnitTests
         Assert.Equal(3, result.right.left.val);
         Assert.Equal(1, result.right.right.val);
     }
+
+    [Fact]
+    public void SymmetricTreeTest()
+    {
+        //         1  
+        //      /     \    
+        //     2       2
+        //    / \     / \
+        //   3   4   4   3
+
+        TreeNode root = new(1);
+
+        root.left = new(2);
+        root.right = new(2);
+
+        root.left.left = new(3);
+        root.left.right = new(4);
+
+        root.right.left = new(4);
+        root.right.right = new(3);
+
+        var result = SymmetricTree.IsSymmetric(root);
+
+        Assert.True(result);
+    }
 }
