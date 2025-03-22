@@ -711,4 +711,26 @@ public class UnitTests
 
         Assert.Equal([3, 14.5, 11], result);
     }
+
+    [Fact]
+    public void MinimumAbsoluteDifferenceinBSTTest()
+    {
+        //         4  
+        //      /     \    
+        //     2       6
+        //   /   \
+        //  1     3
+
+        TreeNode root = new(4);
+
+        root.left = new(2);
+        root.right = new(6);
+
+        root.left.left = new(1);
+        root.left.right = new(3);
+
+        var result = MinimumAbsoluteDifferenceinBST.GetMinimumDifference(root);
+
+        Assert.Equal(1, result);
+    }
 }
