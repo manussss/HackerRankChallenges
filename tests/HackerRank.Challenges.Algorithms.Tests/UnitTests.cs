@@ -689,4 +689,26 @@ public class UnitTests
 
         Assert.Equal(6, result);
     }
+
+    [Fact]
+    public void AverageofLevelsinBinaryTreeTest()
+    {
+        //         3  
+        //      /     \    
+        //     9       20
+        //            /  \
+        //           15   7
+
+        TreeNode root = new(3);
+
+        root.left = new(9);
+        root.right = new(20);
+
+        root.right.left = new(15);
+        root.right.right = new(7);
+
+        var result = AverageofLevelsinBinaryTree.AverageOfLevels(root);
+
+        Assert.Equal([3, 14.5, 11], result);
+    }
 }
