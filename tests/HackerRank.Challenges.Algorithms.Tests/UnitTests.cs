@@ -1,5 +1,6 @@
 using ProgrammingChallenges.HackerRank;
 using ProgrammingChallenges.LeetCode;
+using ProgrammingChallenges.ManningAlgorithms;
 
 namespace ProgrammingChallenges.Tests;
 
@@ -732,5 +733,15 @@ public class UnitTests
         var result = MinimumAbsoluteDifferenceinBST.GetMinimumDifference(root);
 
         Assert.Equal(1, result);
+    }
+
+    [Fact]
+    public void BinarySearchTest()
+    {
+        var result = BinarySearch.Search([1, 2, 3, 4, 5], 6);
+        var result1 = BinarySearch.Search([1, 2, 3, 4, 5], 3);
+
+        Assert.Null(result);
+        Assert.Equal(2, result1);
     }
 }
