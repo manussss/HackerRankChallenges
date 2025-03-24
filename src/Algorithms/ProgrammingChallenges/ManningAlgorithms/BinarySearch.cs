@@ -17,11 +17,11 @@ public static class BinarySearch
             if (guess == elementToFind)
                 return half;
 
-            else if (guess > elementToFind)
-                maximum = half - 1;
-
             else if (guess < elementToFind)
                 minimum = half + 1;
+
+            else if (guess > elementToFind)
+                maximum = half - 1;
         }
 
         return null;

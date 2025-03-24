@@ -8,7 +8,7 @@ public static class MergeSortedArray
     Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
     Output: [1,2,2,3,5,6]
      */
-    public static void Merge(int[] array1, int array1Count, int[] array2, int array2Count)
+    public static int[] Merge(int[] array1, int array1Count, int[] array2, int array2Count)
     {
         var aux = 0;
 
@@ -22,5 +22,7 @@ public static class MergeSortedArray
         }
 
         Array.Sort(array1);
+
+        return array1;
     }
 }
