@@ -1,3 +1,4 @@
+using System.Globalization;
 using ProgrammingChallenges.HackerRank;
 using ProgrammingChallenges.LeetCode;
 using ProgrammingChallenges.ManningAlgorithms;
@@ -6,6 +7,10 @@ namespace ProgrammingChallenges.Tests;
 
 public class UnitTests
 {
+    public UnitTests()
+    {
+        CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+    }
     [Fact]
     public void DesignerPdfViewerTest()
     {
@@ -167,14 +172,19 @@ public class UnitTests
         var result = Staircase.GetStaircase(6);
 
         //Assert
-        Assert.Equal(
+        var expected = 
     @"     #
     ##
    ###
   ####
  #####
 ######
-", result);
+";
+        expected = expected.Replace("\r\n", "\n");
+        result = result.Replace("\r\n", "\n");
+        
+        bool areEqual = string.Compare(expected, result, StringComparison.InvariantCulture) == 0;
+        Assert.True(areEqual);
     }
 
     [Fact]
@@ -183,9 +193,9 @@ public class UnitTests
         //Arrange & Act
         var result = PlusMinus.GetPlusMinus([1, 1, 0, -1, -1]);
 
-        Assert.Equal("0,400000", result[0]);
-        Assert.Equal("0,200000", result[1]);
-        Assert.Equal("0,400000", result[2]);
+        Assert.Equal("0.400000", result[0]);
+        Assert.Equal("0.200000", result[1]);
+        Assert.Equal("0.400000", result[2]);
     }
 
     [Fact]
