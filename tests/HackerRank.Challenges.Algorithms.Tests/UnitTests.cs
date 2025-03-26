@@ -7,10 +7,6 @@ namespace ProgrammingChallenges.Tests;
 
 public class UnitTests
 {
-    public UnitTests()
-    {
-        CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-    }
     [Fact]
     public void DesignerPdfViewerTest()
     {
