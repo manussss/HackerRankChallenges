@@ -10,12 +10,12 @@ public static class RemoveDuplicatesFromSortedArray
     arr = [1, 1, 2, 3, 3, 4, 5]
 
     se length == 0, retorna
-    j = 1
+    i = 1
     aux = 0
 
-    1 iteration) 1(pos 1) != 1 (pos 0), nao entao continua
-    2 iteration) 2(pos 2) != 1 (pos 0), sim entao aux++ E nums[1] (1) = nums[2] (2)
-    3 iteration) 3(pos 3) != 2 (pos 1), sim entao aux++ E nums[2] (2) = nums[3] (3)
+    -> aux = 0
+    -> sortedArray
+    -> if pos[1] != pos[aux] ==> pos[1] = pos[aux] & aux++
      */
     public static int RemoveDuplicates(int[] nums)
     {
