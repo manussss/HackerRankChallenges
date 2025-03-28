@@ -8,6 +8,17 @@ public static class MajorityElement
      */
     public static int GetMajorityElement(int[] nums)
     {
-        return nums.GroupBy(x => x).First(x => x.Count() > (nums.Length / 2)).Key;
+        var map = new Dictionary<int, int>();
+        var majority = nums.Length / 2;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (!map.ContainsKey(nums[i]))
+                map.Add(nums[i], 1);
+            else
+                map[nums[i]]++;
+        }
+
+        return map.FirstOrDefault(m => m.Value > majority).Key;
     }
 }
