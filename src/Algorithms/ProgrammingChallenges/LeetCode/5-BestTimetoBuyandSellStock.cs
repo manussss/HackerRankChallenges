@@ -12,17 +12,21 @@ public static class BestTimetoBuyandSellStock
     public static int GetMaxProfit(int[] prices)
     {
         var minPrice = prices[0];
-        var totalProfit = 0;
+        var maxProfit = 0;
 
         for (int i = 1; i < prices.Length; i++)
         {
             if (prices[i] < minPrice)
+            {
                 minPrice = prices[i];
-
-            else if (prices[i] - minPrice > totalProfit)
-                totalProfit = prices[i] - minPrice;
+            }
+            
+            if ((prices[i] - minPrice) > maxProfit)
+            {
+                maxProfit = prices[i] - minPrice;
+            }
         }
 
-        return totalProfit;
+        return maxProfit;
     }
 }
