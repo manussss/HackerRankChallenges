@@ -2,6 +2,20 @@
 
 public static class RomanToInteger
 {
+    /* Roman numbers are written backwards
+
+    MCMXCIV
+
+    Start by the end => V
+    V < 0 ? No, then sum
+    Go to I
+    I < V ? Yes, then subtract
+    C < I ? No, then sum
+    X < C ? Yes, then subtract
+    ...
+
+    MCMXCIV
+   */
     public static int TranslateRomanToInt(string s)
     {
         var sum = 0;
