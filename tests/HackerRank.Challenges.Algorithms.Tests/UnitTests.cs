@@ -752,4 +752,12 @@ public class UnitTests
         Assert.Null(result);
         Assert.Equal(2, result1);
     }
+
+    [Fact]
+    public void SelectionSortTest()
+    {
+        var result = SelectionSort.GetSelectionSort([5, 4, 1, 2, 3]);
+
+        Assert.Equal([1, 2, 3, 4, 5], result);
+    }
 }
