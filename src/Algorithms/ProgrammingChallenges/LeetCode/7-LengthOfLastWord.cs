@@ -9,6 +9,20 @@ public static class LengthOfLastWord
      */
     public static int GetLengthOfLastWord(string s)
     {
-        return s.Split(' ').Where(s => !string.IsNullOrEmpty(s)).Last().Length;
+        var length = 0;
+        var words = s.Split(' ');
+
+        for (int i = words.Length - 1; i >= 0; i--)
+        {
+            if (string.IsNullOrEmpty(words[i]))
+                continue;
+            else
+            {
+                length = words[i].Length;
+                break;
+            }
+        }
+
+        return length;
     }
 }
