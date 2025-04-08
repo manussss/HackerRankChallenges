@@ -789,4 +789,12 @@ public class UnitTests
 
         Assert.Equal("not found", result);
     }
+
+    [Fact]
+    public void FactorialTest()
+    {
+        var result = Factorial.GetFactorial(5);
+
+        Assert.Equal(120, result);
+    }
 }
