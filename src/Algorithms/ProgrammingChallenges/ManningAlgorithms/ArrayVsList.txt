@@ -1,4 +1,4 @@
-/*
+
 
             Arrays    Listas
 Leitura    |  O(1)  | O(N)
@@ -17,5 +17,3 @@ décimo elemento de uma lista encadeada, primeiro precisará ler os nove anterio
 ao endereço do décimo.
 
 O aleatório permite que você pule direto para o décimo elemento.
-
-*/

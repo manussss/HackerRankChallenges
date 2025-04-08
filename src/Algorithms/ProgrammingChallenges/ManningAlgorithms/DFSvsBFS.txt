@@ -1,0 +1,5 @@
+| DFS                                              | BFS                                                     |
+| ---                                              | ---                                                     |
+| Uses stack (implicit or explicit)                | Uses queue                                              |
+| Ideal for exhaustive searches or solving puzzles | Ideal for shortest path problems                        |
+| Can consume less memory in tree traversal        | Can be more memory-intensive, especially in wide graphs |
