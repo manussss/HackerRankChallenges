@@ -2,6 +2,7 @@ using System.Globalization;
 using ProgrammingChallenges.HackerRank;
 using ProgrammingChallenges.LeetCode;
 using ProgrammingChallenges.ManningAlgorithms;
+using ProgrammingChallenges.ManningAlgorithms.Recursion;
 
 namespace ProgrammingChallenges.Tests;
 
@@ -759,5 +760,33 @@ public class UnitTests
         var result = SelectionSort.GetSelectionSort([5, 4, 1, 2, 3]);
 
         Assert.Equal([1, 2, 3, 4, 5], result);
+    }
+
+    [Fact]
+    public void BoxRecursionTest()
+    {
+        var boxes = new List<Box>
+        {
+            new("box 1", [], false),
+            new("box 2", [ new("box 3", [], true) ], false)
+        };
+
+        var result = BoxRecursion.GetBoxWithKey(boxes);
+
+        Assert.Equal("box 3", result);
+    }
+
+    [Fact]
+    public void BoxRecursionNotFoundTest()
+    {
+        var boxes = new List<Box>
+        {
+            new("box 1", [], false),
+            new("box 2", [ new("box 3", [], false) ], false)
+        };
+
+        var result = BoxRecursion.GetBoxWithKey(boxes);
+
+        Assert.Equal("not found", result);
     }
 }
