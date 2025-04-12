@@ -7,15 +7,14 @@ public static class RemoveDuplicatesFromSortedArray
     such that each unique element appears only once. The relative order of the elements should be 
     kept the same. Then return the number of unique elements in nums. 
 
-    arr = [1, 1, 2, 3, 3, 4, 5]
-
     se length == 0, retorna
     i = 1
     aux = 0
 
     -> aux = 0
     -> sortedArray
-    -> if pos[1] != pos[aux] ==> pos[1] = pos[aux] & aux++
+
+    arr = [1, 1, 2, 3, 3, 4, 5]
      */
     public static int RemoveDuplicates(int[] nums)
     {

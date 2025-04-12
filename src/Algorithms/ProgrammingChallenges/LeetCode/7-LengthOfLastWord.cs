@@ -3,14 +3,15 @@
 public static class LengthOfLastWord
 {
     /*
-    Given a string s consisting of words and spaces, return the length of the last word in the string.
+    Given a string s consisting of words and spaces, return the length of 
+    the last word in the string.
 
     A word is a maximal substring consisting of non-space characters only.
      */
     public static int GetLengthOfLastWord(string s)
     {
-        var length = 0;
         var words = s.Split(' ');
+        var length = 0;
 
         for (int i = words.Length - 1; i >= 0; i--)
         {
