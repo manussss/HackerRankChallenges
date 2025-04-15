@@ -797,4 +797,12 @@ public class UnitTests
 
         Assert.Equal(120, result);
     }
+
+    [Fact]
+    public void SumArrayTest()
+    {
+        var result = SumArray.Sum([1, 2, 3, 4]);
+
+        Assert.Equal(10, result);
+    }
 }

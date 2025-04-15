@@ -17,7 +17,7 @@ public static class LongestCommonPrefix
     Output: ""
     Explanation: There is no common prefix among the input strings. 
      */
-     public static string GetLongestCommonPrefix(string[] strs)
+    public static string GetLongestCommonPrefix(string[] strs)
     {
         if (strs == null || strs.Length == 0)
             return string.Empty;
