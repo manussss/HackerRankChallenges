@@ -805,4 +805,13 @@ public class UnitTests
 
         Assert.Equal(10, result);
     }
+
+    [Fact]
+    public void QuickSortTest()
+    {
+        int[] array = [4, 3, 2, 1];
+        QuickSort.Sort(array, 0, array.Length - 1);
+
+        Assert.Equal([1, 2, 3, 4], array);
+    }
 }
