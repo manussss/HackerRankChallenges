@@ -818,6 +818,11 @@ public class UnitTests
     [Fact]
     public void BFSSearchTest()
     {
+        //           1
+        //       /   \   \ 
+        //      2     3   4
+        //     /     / \
+        //    5     6   7
         Graph graph = new();
         graph.AddEdge(1, 2);
         graph.AddEdge(1, 3);
