@@ -1,5 +1,28 @@
+Grafos são formados por vértices e arestas
+
+O->O, sendo O o vérice e -> a aresta
+
 | DFS                                              | BFS                                                     |
 | ---                                              | ---                                                     |
 | Uses stack (implicit or explicit)                | Uses queue                                              |
 | Ideal for exhaustive searches or solving puzzles | Ideal for shortest path problems                        |
 | Can consume less memory in tree traversal        | Can be more memory-intensive, especially in wide graphs |
+
+DFS
+    - Ajuda a responder duas perguntas: 
+    1- Existe algum caminho do vértice A até o vértice B? 
+    2- Qual o caminho mínimo do vértice A até o vértice B?
+    - Deve-se preferir encontrar o primeiro grau do que o segundo, e o segundo do que o terceiro
+    - Utiliza da estrutura da Fila
+    - Um nível por vez
+    - Deve-se marcar o nó como "visitado", evitando repetição e loops
+    - Deve-se verificar os itens na ordem em que foram adicionadas à lista de pesquisa, portanto
+        esta deve ser uma Fila. Do contrário, você não obterá o caminho mínimo
+    - Dígrafo (grafo direcionado) a relação acontece apenas em um sentido
+    - Grafo não direcionado (grafo) não contém setas e ambos os vértices são vizinhos um do outro
+
+Fila
+    - FIFO
+
+Pilha
+    - LIFO
