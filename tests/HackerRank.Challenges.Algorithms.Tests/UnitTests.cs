@@ -814,4 +814,20 @@ public class UnitTests
 
         Assert.Equal([1, 2, 3, 4], array);
     }
+
+    [Fact]
+    public void BFSSearchTest()
+    {
+        Graph graph = new();
+        graph.AddEdge(1, 2);
+        graph.AddEdge(1, 3);
+        graph.AddEdge(1, 4);
+        graph.AddEdge(2, 5);
+        graph.AddEdge(3, 6);
+        graph.AddEdge(3, 7);
+
+        List<int> visited = graph.BreadthFirstSearch(1);
+
+        Assert.Equal([1, 2, 3, 4, 5, 6, 7], visited);
+    }
 }
