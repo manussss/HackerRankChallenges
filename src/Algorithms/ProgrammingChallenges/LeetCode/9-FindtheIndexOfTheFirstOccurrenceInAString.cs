@@ -12,23 +12,17 @@ public static class FindtheIndexOfTheFirstOccurrenceInAString
      */
     public static int GetIndexOfTheFirstOccurrence(string haystack, string needle)
     {
-        for (var i = 0; i <= haystack.Length - needle.Length; i++)
+        var aux = 0;
+
+        while (!haystack.StartsWith(needle))
         {
-            var match = true;
+            haystack = haystack[1..];
+            aux++;
 
-            for (var j = 0; j < needle.Length; j++)
-            {
-                if (haystack[i + j] != needle[j])
-                {
-                    match = false;
-                    break;
-                }
-            }
-
-            if (match)
-                return i;
+            if (string.IsNullOrEmpty(haystack))
+                return -1;
         }
-
-        return -1;
+        
+        return aux;
     }
 }
