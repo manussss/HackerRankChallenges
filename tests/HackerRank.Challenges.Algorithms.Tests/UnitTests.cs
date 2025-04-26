@@ -835,4 +835,33 @@ public class UnitTests
 
         Assert.Equal([1, 2, 3, 4, 5, 6, 7], visited);
     }
+
+    [Fact]
+    public void DijkstraTest()
+    {
+        var a = new Node("A");
+        var b = new Node("B");
+        var c = new Node("C");
+        var d = new Node("D");
+        var e = new Node("E");
+        var f = new Node("F");
+
+        a.ConnectTo(b, 4);
+        a.ConnectTo(c, 2);
+        b.ConnectTo(c, 1);
+        b.ConnectTo(d, 5);
+        c.ConnectTo(d, 8);
+        c.ConnectTo(e, 10);
+        d.ConnectTo(f, 6);
+        d.ConnectTo(e, 2);
+        e.ConnectTo(f, 2);
+
+        var result = Dijkstra.FindShortestPath(a, e);
+
+        Assert.Equal("A", result[0].Label);
+        Assert.Equal("C", result[1].Label);
+        Assert.Equal("B", result[2].Label);
+        Assert.Equal("D", result[3].Label);
+        Assert.Equal("E", result[4].Label);
+    }
 }
