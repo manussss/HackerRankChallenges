@@ -5,7 +5,10 @@ Sua velocidade depende do pivô escolhido
 
 [4, 3, 2, 1]
 
-
+1 - faça a partição, para deixar os menores que pivotIndex à esquerda e os maiores à direita
+2 - Sort do inicio ao pivotIndex -1
+3 - Sort do pivotIndex + 1 a direita
+4 - junte tudo e o array estará ordenado
 */
 public static class QuickSort
 {
@@ -29,7 +32,7 @@ public static class QuickSort
         {
             if (array[j] < pivot)
             {
-                i++; 
+                i++;
                 Swap(array, i, j);
             }
         }
@@ -41,8 +44,6 @@ public static class QuickSort
 
     private static void Swap(int[] array, int a, int b)
     {
-        int temp = array[a];
-        array[a] = array[b];
-        array[b] = temp;
+        (array[b], array[a]) = (array[a], array[b]);
     }
 }
