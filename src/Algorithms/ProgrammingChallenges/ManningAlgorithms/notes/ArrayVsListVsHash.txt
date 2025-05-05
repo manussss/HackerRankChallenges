@@ -1,9 +1,9 @@
 
 
-            Arrays    Listas    Hash (caso médio)   Hash (pior caso)
-Leitura    |  O(1)  | O(N)    | O(1)              | O(N) 
-Inserção   |  O(N)  | O(1)    | O(1)              | O(N)
-Eliminação |  O(N)  | O(1)    | O(1)              | O(N)
+            Arrays    Listas    Hash (caso médio)   Hash (pior caso)   Binary Tree
+Leitura    |  O(1)  | O(N)    | O(1)              | O(N)             | O(log n)
+Inserção   |  O(N)  | O(1)    | O(1)              | O(N)             | O(log n)
+Eliminação |  O(N)  | O(1)    | O(1)              | O(N)             | O(log n)
 
 O(N) -> Tempo de execução linear
 O(1) -> Tempo de execução constante
