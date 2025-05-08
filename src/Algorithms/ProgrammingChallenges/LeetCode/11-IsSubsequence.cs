@@ -17,7 +17,7 @@ public static class IsSubsequence
         {
             if (string.IsNullOrEmpty(subsequence) || (subsequenceIndex >= subsequence.Length))
                 break;
-
+            
             if (subsequence[subsequenceIndex] == phrase[i])
                 subsequenceIndex++;
         }
