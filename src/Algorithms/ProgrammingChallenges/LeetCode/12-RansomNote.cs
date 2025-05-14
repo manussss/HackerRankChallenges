@@ -13,9 +13,9 @@ public static class RansomNote
         var ransomNoteLength = ransomNote.Length;
         var sameCharactersAmount = 0;
 
-        for (int i = 0; i < magazine.Length; i++)
+        for (var i = 0; i < magazine.Length; i++)
         {
-            if (sameCharactersAmount == ransomNoteLength)
+            if (ransomNoteLength == sameCharactersAmount)
                 return true;
 
             for (int j = 0; j < ransomNote.Length; j++)
@@ -29,6 +29,6 @@ public static class RansomNote
             }
         }
 
-        return sameCharactersAmount == ransomNoteLength;
+        return ransomNoteLength == sameCharactersAmount;
     }
 }
