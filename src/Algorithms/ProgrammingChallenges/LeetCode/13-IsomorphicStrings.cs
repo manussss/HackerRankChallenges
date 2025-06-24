@@ -18,9 +18,9 @@ public static class IsomorphicStrings
         {
             if (!map.ContainsKey(s[i]))
             {
-                foreach (KeyValuePair<char, char> isomorph in map)
+                foreach (var isomorph in map)
                 {
-                    if (isomorph.Value == t[i]) 
+                    if (isomorph.Value == t[i])
                         return false;
                 }
 
@@ -28,7 +28,7 @@ public static class IsomorphicStrings
             }
             else
             {
-                if (map[s[i]] != t[i]) 
+                if (map[s[i]] != t[i])
                     return false;
             }
         }
