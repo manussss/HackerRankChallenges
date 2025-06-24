@@ -26,11 +26,8 @@ public static class IsomorphicStrings
 
                 map.Add(s[i], t[i]);
             }
-            else
-            {
-                if (map[s[i]] != t[i])
-                    return false;
-            }
+            else if (map[s[i]] != t[i])
+                return false;
         }
 
         return true;
