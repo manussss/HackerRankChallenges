@@ -32,7 +32,7 @@ public static class WordPattern
         {
             if (!map.ContainsKey(pattern[i]))
             {
-                foreach (KeyValuePair<char, string> word in map)
+                foreach (var word in map)
                 {
                     if (word.Value == words[i])
                         return false;
