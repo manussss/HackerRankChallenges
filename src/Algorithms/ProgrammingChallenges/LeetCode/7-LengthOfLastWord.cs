@@ -3,27 +3,23 @@
 public static class LengthOfLastWord
 {
     /*
-    Given a string s consisting of words and spaces, return the length of 
-    the last word in the string.
-
-    A word is a maximal substring consisting of non-space characters only.
+    1) Given a string s consisting of words and spaces, return the length of 
+        the last word in the string.
+    1.1) A word is a maximal substring consisting of non-space characters only.
+    2) Split the input for empty spaces
+    3) Loop through the words backwards
+    4) if the word is not null or empty, return its length
      */
     public static int GetLengthOfLastWord(string s)
     {
         var words = s.Split(' ');
-        var length = 0;
 
         for (int i = words.Length - 1; i >= 0; i--)
         {
-            if (string.IsNullOrEmpty(words[i]))
-                continue;
-            else
-            {
-                length = words[i].Length;
-                break;
-            }
+            if (!string.IsNullOrEmpty(words[i]))
+                return words[i].Length;
         }
 
-        return length;
+        return 0;
     }
 }

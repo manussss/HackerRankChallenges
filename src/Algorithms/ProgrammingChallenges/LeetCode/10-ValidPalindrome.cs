@@ -5,10 +5,15 @@ namespace ProgrammingChallenges.LeetCode;
 public static class ValidPalindrome
 {
     /*
-    A phrase is a palindrome if, after converting all uppercase letters 
-    into lowercase letters and removing all non-alphanumeric characters, 
-    it reads the same forward and backward. Alphanumeric characters include 
-    letters and numbers. 
+    1) A phrase is a palindrome if, after converting all uppercase letters 
+        into lowercase letters and removing all non-alphanumeric characters, 
+        it reads the same forward and backward. Alphanumeric characters include 
+        letters and numbers.
+    2) remove alphanumeric from the input
+    3) if is null or empty after removing, return true
+    4) reverse the string and create a new instace of it
+    5) return if phrase is a palindrome or not
+
      */
     public static bool IsPalindrome(string s)
     {

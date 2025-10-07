@@ -2,7 +2,14 @@
 
 public static class RomanToInteger
 {
-    /* Roman numbers are written backwards
+    /* 
+    
+    1) Translate roman numbers to integer numbers
+    1.1) Roman numbers are written backwards
+    2) Create a map <roman, integer>
+    3) Loop through the numbers backwards
+    4) Subtract the sum if the 'current' number is smaller than the 'previous'
+    5) Increase the sum if the 'current' number is bigger than the 'previous'
 
     MCMXCIV
 
@@ -13,8 +20,6 @@ public static class RomanToInteger
     C < I ? No, then sum
     X < C ? Yes, then subtract
     ...
-
-    MCMXCIV
    */
     public static int TranslateRomanToInt(string s)
     {
@@ -35,7 +40,7 @@ public static class RomanToInteger
         for (int i = s.Length - 1; i >= 0; i--)
         {
             var current = map[s[i]];
-            
+
             if (current < previous)
                 sum -= current;
             else
