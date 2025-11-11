@@ -6,11 +6,11 @@ public static class ValidAnagram
     1) Given two strings s and t, return true if t is an anagram of s, and false otherwise
         Using all of the characters in 's'we can create 't'
 
-    2) Create two dics for each input
-    3) map 's' and how many ocurrences it has
-    4) map 't' and how many ocurrences it has
-    5) foreach 's', check if 't' has its key (if it doesnt, then return false)
-        5.1) also check if t's value is the same as s's value, if its not, the return false
+    2) sort S
+    3) sort T
+    4) loop through s or t and check if s[i] != t[i]
+        4.1) if the condition above is true, it means its not an anagram, return false
+    5) otherwise return true
     
     Input: s = "anagram", t = "nagaram"
     Output: true
@@ -23,31 +23,12 @@ public static class ValidAnagram
         if (s.Length != t.Length)
             return false;
 
-        Dictionary<char, int> sMap = new(s.Length);
-        Dictionary<char, int> tMap = new(t.Length);
+        var sortedS = s.OrderBy(a => a);
+        var sortedT = t.OrderBy(t => t);
 
         for (int i = 0; i < s.Length; i++)
         {
-            if (!sMap.TryGetValue(s[i], out int value))
-                sMap.Add(s[i], 1);
-            else
-                sMap[s[i]] = ++value;
-        }
-
-        for (int i = 0; i < t.Length; i++)
-        {
-            if (!tMap.TryGetValue(t[i], out int value))
-                tMap.Add(t[i], 1);
-            else
-                tMap[t[i]] = ++value;
-        }
-
-        foreach (var sMapItem in sMap)
-        {
-            if (!tMap.TryGetValue(sMapItem.Key, out int value))
-                return false;
-
-            if (value != sMapItem.Value)
+            if (s[i] != t[i])
                 return false;
         }
 
