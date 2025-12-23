@@ -23,12 +23,31 @@ public static class ValidAnagram
         if (s.Length != t.Length)
             return false;
 
-        var sortedS = s.OrderBy(a => a);
-        var sortedT = t.OrderBy(t => t);
+        Dictionary<char, int> sMap = new(s.Length);
+        Dictionary<char, int> tMap = new(t.Length);
 
         for (int i = 0; i < s.Length; i++)
         {
-            if (s[i] != t[i])
+            if (!sMap.TryGetValue(s[i], out int value))
+                sMap.Add(s[i], 1);
+            else
+                sMap[s[i]]++;
+        }
+
+        for (int i = 0; i < t.Length; i++)
+        {
+            if (!tMap.TryGetValue(t[i], out int value))
+                tMap.Add(t[i], 1);
+            else
+                tMap[t[i]]++;
+        }
+
+        foreach (var sMapItem in sMap)
+        {
+            if (!tMap.ContainsKey(sMapItem.Key))
+                return false;
+
+            if (tMap[sMapItem.Key] != sMapItem.Value)
                 return false;
         }
 
