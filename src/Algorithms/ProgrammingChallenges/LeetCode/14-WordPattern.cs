@@ -29,7 +29,7 @@ public static class WordPattern
             in map if its value is equals to words[i], if true then return false bc
             it means that there's already a value with the word's key
         5.2) add pattern and words to the map
-        5.3) if map[pattern[i]] is different than words[i] return false bc
+        5.3) else if map[pattern[i]] is different than words[i] return false bc
             it means that there's a mapping but the values are different
     6) otherwise return true
      */
@@ -37,9 +37,9 @@ public static class WordPattern
     {
         var words = s.Split(' ');
 
-        if (pattern.Length != words.Length)
+        if (words.Length != pattern.Length)
             return false;
-
+        
         Dictionary<char, string> map = [];
 
         for (int i = 0; i < pattern.Length; i++)
